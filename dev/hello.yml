@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/shineset/sarmen:5571
+        image: docker.io/shineset/sarmen:5580
         ports:
         - containerPort: 80
 
