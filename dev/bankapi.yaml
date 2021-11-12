@@ -16,6 +16,9 @@ spec:
       containers:
       - name: bank
         image: docker.io/shineset/idt:5596
+        env:
+        - name: TZ
+          value: "ASIA/YEREVAN"
         ports:
         - containerPort: 9008
 
