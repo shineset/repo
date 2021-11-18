@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bank
+  name: bankapi-Deployment
   namespace: idt
 spec:
   selector:
     matchLabels:
-      app: bank
+      app: bankapi
   replicas: 4 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: bank
+        app: bankapi
     spec:
       containers:
-      - name: bank
+      - name: bankapi
         image: docker.io/shineset/idt:5596
         env:
         - name: TZ
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bank
+  name: bankapi-svc
   namespace: idt
 spec:
   type: NodePort
@@ -36,4 +36,4 @@ spec:
       protocol: TCP
       nodePort: 30005
   selector:
-    app: bank
+    app: bankapi
