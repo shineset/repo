@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: idbanking
-        image: docker.io/shineset/idbanking:3
+        image: docker.io/shineset/idbanking:4
         ports:
         - containerPort: 80
 
